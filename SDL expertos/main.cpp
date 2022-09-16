@@ -10,7 +10,8 @@
 
 int main(int argc, char* argv[])
 {
-    SDL_Init(SDL_INIT_EVERYTHING);
+    if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
+        std::cout << SDL_GetError() << std::endl;
 
     Uint32 flags = SDL_WINDOW_SHOWN;
     
@@ -18,29 +19,36 @@ int main(int argc, char* argv[])
     SDL_Event eve;
     SDL_Renderer* ren = SDL_CreateRenderer(win, -1, 0);
 
+    SDL_SetRenderDrawColor(ren, 0, 0, 0, 255);
+    SDL_RenderClear(ren);
+    SDL_RenderPresent(ren);
+
     if (win == nullptr || ren == nullptr)
     {
         std::cout << SDL_GetError() << std::endl;
     }
 
     bool running = true;
-    int r = 0;
 
-    dynamic_text trial;
+    dynamic_text trial(&eve, win, ren);
 
     while (running)
     {
+        SDL_RenderClear(ren);
         SDL_PollEvent(&eve);
 
         //Call Trail:
 
-        r = trial.main(&eve, win, ren);
+        trial.main();
 
         //END CALL
 
         if (eve.type == SDL_QUIT)
             running = false;
+        SDL_RenderPresent(ren);
     }
 
-    return r;
+    SDL_DestroyWindow(win);
+    SDL_DestroyRenderer(ren);
+    return 0;
 }
