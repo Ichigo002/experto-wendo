@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
     SDL_Event eve;
     SDL_Renderer* ren = SDL_CreateRenderer(win, -1, 0);
 
-    SDL_SetRenderDrawColor(ren, 0, 0, 0, 255);
+    SDL_SetRenderDrawColor(ren, 100, 0, 0, 255);
     SDL_RenderClear(ren);
     SDL_RenderPresent(ren);
 
