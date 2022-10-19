@@ -33,7 +33,7 @@ bool modify_pixel::loadMedia()
 	int pixelCount = getPitch32() * mHeight;
 
 	Uint32 colorKey = SDL_MapRGB(SDL_GetWindowSurface(win)->format, 255, 255, 255);
-	Uint32 transparent = SDL_MapRGBA(SDL_GetWindowSurface(win)->format, 0, 255, 0, 0);
+	Uint32 nc = SDL_MapRGBA(SDL_GetWindowSurface(win)->format, 0, 255, 0, 0);
 
 	//Color key pixels
 	//for (int i = 0; i < pixelCount; ++i)
@@ -44,16 +44,16 @@ bool modify_pixel::loadMedia()
 	//	}
 	//}
 
-	pixels[120] = transparent;
-	pixels[121] = transparent;
-	pixels[122] = transparent;
-	pixels[123] = transparent;
-	pixels[124] = transparent;
-	pixels[120 + mWidth] = transparent;
-	pixels[121 + mWidth] = transparent;
-	pixels[122 + mWidth] = transparent;
-	pixels[123 + mWidth] = transparent;
-	pixels[124 + mWidth] = transparent;
+	pixels[120] = nc;
+	pixels[121] = nc;
+	pixels[122] = nc;
+	pixels[123] = nc;
+	pixels[124] = nc;
+	pixels[120 + mWidth] = nc;
+	pixels[121 + mWidth] = nc;
+	pixels[122 + mWidth] = nc;
+	pixels[123 + mWidth] = nc;
+	pixels[124 + mWidth] = nc;
 	std::cout << pixelCount;
 
 	//Create texture from manually color keyed pixels

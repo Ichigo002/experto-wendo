@@ -8,7 +8,7 @@
 
 /// <summary>
 /// Modify singles pixels.
-/// Last experiment 2/1
+/// Last experiment 2/2
 /// </summary>
 class modify_pixel
 {
