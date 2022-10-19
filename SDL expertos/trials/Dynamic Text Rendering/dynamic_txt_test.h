@@ -6,6 +6,10 @@
 #include <string>
 #include <iostream>
 
+/// <summary>
+/// NOT WORK
+/// Last experiment 1/3
+/// </summary>
 class dynamic_text
 {
 private:

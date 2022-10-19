@@ -2,6 +2,7 @@
 #include <SDL.h>
 
 #include "trials/Dynamic Text Rendering/dynamic_txt_test.h"
+#include "trials/Modifying pixels/modify_pixel.h"
 
 #define WIN_W 600
 #define WIN_H 400
@@ -30,7 +31,8 @@ int main(int argc, char* argv[])
 
     bool running = true;
 
-    dynamic_text trial(&eve, win, ren);
+    //dynamic_text trial(&eve, win, ren);
+    modify_pixel trial(&eve, win, ren);
 
     while (running)
     {
@@ -39,7 +41,7 @@ int main(int argc, char* argv[])
 
         //Call Trail:
 
-        trial.main();
+        trial.__main();
 
         //END CALL
 

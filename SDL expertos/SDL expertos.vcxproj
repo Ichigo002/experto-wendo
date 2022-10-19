@@ -148,7 +148,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="trials\Modifying pixels\modify_pixel.cpp" />
     <ClCompile Include="trials\Dynamic Text Rendering\dynamic_txt_test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="trials\Modifying pixels\modify_pixel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

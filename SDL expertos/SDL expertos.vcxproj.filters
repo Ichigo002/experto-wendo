@@ -21,5 +21,13 @@
     <ClCompile Include="trials\Dynamic Text Rendering\dynamic_txt_test.h">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="trials\Modifying pixels\modify_pixel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="trials\Modifying pixels\modify_pixel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
